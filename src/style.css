@@ -1,0 +1,30 @@
+:root {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, 'sans-serif';
+  background: #F9F9F9;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"),
+  url("../public/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  text-align: center;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  background: black;
+  color: white;
+}
+
+@media (max-width:768px) {
+  html {
+    font-size: 12px;
+  }
+}
