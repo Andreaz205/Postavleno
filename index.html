@@ -7,6 +7,17 @@
     <title>Поставлено</title>
   </head>
   <body>
+  <script>
+    function toggleModal() {
+      const modal = document.getElementById('modal')
+
+      if (modal.style.display === 'none') {
+        modal.style.display = "block"
+      } else {
+        modal.style.display = "none"
+      }
+    }
+  </script>
     <header>
       <div class="max-w-[1600px] px-4 lg:px-[160px] pt-[20px] mx-auto md:pb-20 pb-12">
         <div class="flex justify-between items-center">
@@ -29,6 +40,46 @@
         </div>
       </div>
     </header>
+
+    <div class="bg-black bg-opacity-40 fixed w-[100vw] h-[100vh] top-0 left-0" style="display: none" id="modal">
+      <div class="relative w-full h-full">
+        <div class="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-black text-white rounded-[1rem] px-[5rem] pt-[2.25rem] pb-20 w-[30rem]">
+          <div class="relative">
+            <div class="absolute -right-8">
+              <img src="/public/images/close-white.svg" alt="x" class="cursor-pointer select-none" onclick="toggleModal()">
+            </div>
+            <div class="pt-[5rem]">
+              <input class="w-full rounded-[0.5rem] h-12 px-6 text-black outline-none" placeholder="ФИО">
+
+              <input class="mt-6 w-full rounded-[0.5rem] h-12 px-6 text-black outline-none" placeholder="Телефон">
+
+              <div class="flex justify-center items-center">
+                <button class="mt-10 rounded-[0.5rem] bg-white text-black font-semibold px-[2.125rem] py-[0.875rem] outline-none">
+                  Отправить
+                </button>
+              </div>
+
+              <div class="mt-[5rem] text-center font-semibold">
+                Или прямо сейчас напишите нам:
+              </div>
+
+              <div class="flex justify-center items-center flex-nowrap gap-[1.5rem] mt-10">
+                <a href="#">
+                  <img src="public/images/envelope-white.svg" alt="envelope" class="w-[2.25rem] h-[2.25rem]">
+                </a>
+                <a target="_blank" href="https://api.whatsapp.com/send/?phone=%2B79601668996&text&type=phone_number&app_absent=0">
+                  <img src="public/images/whats-up-white.svg" alt="whats-up" class="w-[2.25rem] h-[2.25rem]">
+                </a>
+                <a target="_blank" href="https://t.me/postavleno_sup">
+                  <img src="public/images/telegram-white.svg" alt="telegram" class="w-[2.25rem] h-[2.25rem]">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <div class="max-w-[1600px] px-4 lg:px-[160px] pt-[20px] mx-auto overflow-hidden pb-4">
       <div class="flex xxl:justify-between flex-wrap xxl:flex-nowrap xxl:gap-x-[10.5rem]">
@@ -58,7 +109,8 @@
             </div>
           </div>
           <div class="md:pr-4 md:mt-0 mt-[3rem]">
-            <a href="#" class="btn w-full px-[1.8rem] md:px-0 md:mt-6 md:block py-[1.125rem] md:text-[1rem] text-[14px]">Бесплатная консультация</a>
+            <a href="#" class="btn w-full px-[1.8rem] md:px-0 md:mt-6 md:block py-[1.125rem] md:text-[1rem] text-[14px]"
+               onclick="toggleModal()">Бесплатная консультация</a>
           </div>
         </div>
 

@@ -2,6 +2,8 @@
 export default {
   content: [
     "./index.html",
+    "./404.html",
+    "./thanks.html",
     "./about.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
